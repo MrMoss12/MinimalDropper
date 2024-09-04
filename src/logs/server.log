@@ -1,0 +1,8 @@
+2024-09-04 16:15:59,136 - ERROR - Error al iniciar el servidor: [Errno 98] Address already in use
+2024-09-04 16:16:09,810 - ERROR - Error al iniciar el servidor: [Errno 98] Address already in use
+2024-09-04 16:16:23,635 - ERROR - Error al iniciar el servidor: [Errno 98] Address already in use
+2024-09-04 16:17:39,691 - ERROR - Error al iniciar el servidor: [Errno 98] Address already in use
+2024-09-04 16:18:03,261 - ERROR - Error al iniciar el servidor: [Errno 98] Address already in use
+2024-09-04 17:05:47,617 - INFO - Servidor HTTP corriendo en el puerto 8081
+2024-09-04 17:17:39,796 - ERROR - Error al iniciar el servidor: El puerto 8080 ya está en uso
+2024-09-04 17:24:24,370 - INFO - Servidor iniciado en el puerto 8083

