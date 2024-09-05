@@ -6,3 +6,4 @@
 2024-09-04 17:05:47,617 - INFO - Servidor HTTP corriendo en el puerto 8081
 2024-09-04 17:17:39,796 - ERROR - Error al iniciar el servidor: El puerto 8080 ya está en uso
 2024-09-04 17:24:24,370 - INFO - Servidor iniciado en el puerto 8083
+2024-09-04 19:33:02,809 - INFO - Servidor detenido manualmente

